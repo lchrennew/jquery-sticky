@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style type="text/css">
+            #c1 {
+                    border: solid 5px black;
+                    height: 400px;
+                    background-color: silver;
+                    overflow: hidden;
+                    margin-top: 20px;
+                    width: 400px;
+                    position: absolute;
+                    left: 100px;
+            }
+            #c1a{
+                background-color: #96d200;
+                height: 100px;
+                word-wrap: hyphenate;
+                    word-break: break-all;
+                    text-wrap: normal;
+                    padding: 20px;
+                    border: solid 5px #b6ff00;
+            }
+            #c1a-inner {
+                height: 100%;background: #6a9500;
+            }
+            #c1b {
+                    background-color: #56a1d7;
+                    width:  800px;
+                    border: solid 5px #9ed6ff;
+            padding: 30px;
+            }
+            #c1b-inner {
+                background-color: #0077cd;
+                color: #fff;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Demo1: Sticky Top when content doesn't overflow y</h1>
+        </div>
+        <div id="c1">
+            <div id="c1a" data-sticky-direction="y" data-sticky-target="#c1" data-sticky-position="top" data-sticky-align="#c1 #c1b">
+                <div id="c1a-inner"></div>
+            </div>
+            <div id="c1b">
+                <div id="c1b-inner">
+
+                </div>
+            </div>
+        </div>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="../../src/jquery.sticky.js">
+        </script>
+    </body>
+</html>
