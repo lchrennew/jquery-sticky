@@ -52,12 +52,9 @@
                 break;
             case 'bottom':
                 this.target
-                .height(this.target.height() - this.self.outerHeight())
-                .css({ 'padding-bottom': this.self.outerHeight() })
                 .scroll(function () {
                     _this.parent.scrollLeft($(this).scrollLeft())
-                })
-                
+                }).append($('<div></div>').width(1).height(this.self.outerHeight()).css({ visibility: 'hidden', clear: 'both'  }))
                 this.parent.width(this.target[0].clientWidth)
 
                 this.self
